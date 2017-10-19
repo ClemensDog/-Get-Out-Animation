@@ -1,0 +1,99 @@
+body{
+    background-color:black;
+}
+
+.box{
+    display:block;
+    width: 17000px;
+    height:800px;
+    background-image: url(Background/Background.png);
+    animation: movement linear 10s forwards;
+}
+
+    @keyframes movement{
+        to{
+            background-position: -6800px;
+        }
+    }
+
+.tyrone{
+    left: -500px;
+    width:335px;
+    height: 445px;
+    display: block;
+    background-image:url(mcss_large.png);
+    animation: skate 1s steps(6) infinite;
+    position:relative;
+    top:350px;
+    }
+
+@keyframes skate{
+    to{
+        background-position: -2000px;
+    }
+}
+
+.fliptyrone{
+    animation: TyroneFlips ease-out 1s;
+    }
+
+@keyframes TyroneFlips{
+
+    to{
+    transform:rotateZ(360deg);
+    }
+}
+
+.jumptyrone{
+    animation: TyroneJumps ease-out 2s forwards;
+}
+
+    @keyframes TyroneJumps{
+        50%{
+            transform:translateY(-300px);
+        }
+        100%{
+                transform:translateY(0px);
+            }
+     }
+
+.action{
+    animation: TyroneEnters linear 2s forwards;
+        }
+
+    @keyframes TyroneEnters{
+        to {
+            transform: translatex(800px)
+        }
+    }
+
+.theman{
+    width:443px;
+    height: 550px;
+    display:block;
+    opacity:0;
+    background-image:url(vss_large.png);
+    animation: evil 1s steps(3) infinite;
+    position:absolute;
+    top:260px;
+    }
+
+@keyframes evil{
+    to{
+        background-position: -1327px;
+    }
+}
+
+.signhere{
+    display:inline-block;
+    opacity:0;
+    font-family: 'Old Standard TT';
+    font-size:50px;
+    background-color:red;
+    width:200px;
+    height:200px;
+    margin-left: 412px;
+    border:solid red 2px;
+
+}
+

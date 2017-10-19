@@ -7,8 +7,11 @@ let jumptyrone = document.querySelector(".jump");
 let fliptyrone = document.querySelector(".flip");
 let villain = document.querySelector(".theman");
 let signbutton = document.querySelector(".signhere");
+let black = document.querySelector(".darkness");
+let morty = document.querySelector(".ohjeez");
 
     enter.addEventListener('animationend', TyroneJumps);
+    signbutton.addEventListener('click', EndGame);
 
 function TyroneJumps(){
     console.log("TyroneJump");
@@ -32,16 +35,20 @@ function ManAppears(){
     console.log("Man Appears");
     villain.classList.toggle("theman");
     villain.style.opacity="1";
-    villain.addEventListener("animationstart", Sign);
+    villain.addEventListener("animationstart", YouLost);
 }
 
-function Sign(){
+function YouLost(){
     console.log("Sign Here");
     signbutton.style.opacity="1";
 }
 
-/*
-function SignContract(){
-let x = document.getElementsByClassName("box").querySelectorAll(".box");
+function EndGame(){
+    console.log("EndGame");
+    black.classList.toggle("endness");
+    black.style.opacity="1";
+    morty.play();
 }
-*/
+
+
+
